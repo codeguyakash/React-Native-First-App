@@ -14,4 +14,13 @@ export default Exstyles = StyleSheet.create({
   viewBox: {
     padding: 15,
   },
+  profileImage: {
+    width: 200,
+    height: 200,
+    borderRadius: 35,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginTop: 25,
+    marginBottom: 10,
+  },
 });

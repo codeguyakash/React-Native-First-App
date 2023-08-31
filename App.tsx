@@ -27,16 +27,9 @@ const App = () => {
     <View style={Exstyles.viewBox}>
       <Image
         source={{
-          uri: 'https://media.licdn.com/dms/image/D4D35AQEmWdaj9WS09Q/profile-framedphoto-shrink_400_400/0/1693188551644?e=1694109600&v=beta&t=Ew8JCRGiweKEwmzdyDsdqTNBE5-qAYkd0Ro7K3Nyw7w',
+          uri: 'https://codeguyakash.github.io/server/image.png',
         }}
-        style={{
-          width: 200,
-          height: 200,
-          borderRadius: 40,
-          marginLeft: 100,
-          marginTop: 25,
-          marginBottom: 10,
-        }}
+        style={Exstyles.profileImage}
       />
       <Text style={{fontSize: 42, textAlign: 'center'}}>Hello👋</Text>
 
