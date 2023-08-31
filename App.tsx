@@ -1,33 +1,53 @@
-import React from 'react';
-import {Text, View, Button} from 'react-native';
+import {Text, View, Button, Image} from 'react-native';
+import CompanyData from './components/CompanyData';
+import UserData from './components/UserData';
+import {useState} from 'react';
+import Exstyles from './style';
 
 const App = () => {
-  return (
-    <View>
-      <Text style={{fontSize: 50}}>Hello, world!</Text>
-      <UserData />
-      <CompanyData />
-      <Button title="Press Here"></Button>
-      <Text style={{fontSize: 50}}>Hello, world!</Text>
-      <Button title="Press Here"></Button>
-    </View>
-  );
-};
+  const [data, setData] = useState(0);
+  let name = 'Father';
 
-const UserData = () => {
+  let userDetails = {
+    name: 'Akash',
+    age: 23,
+    role: 'Software Engineer',
+  };
+  let companyDetails = {
+    name: 'BrainyDX Technologies',
+    emp: 5000,
+    type: 'Service Based Company',
+  };
+
+  const onPress = () => {
+    setData(data + 1);
+    console.warn(`Button Pressed`);
+  };
   return (
-    <View>
-      <Text style={{fontSize: 40}}>Akash!</Text>
-      <Text style={{fontSize: 40}}>Frontend Software Engineer</Text>
-    </View>
-  );
-};
-const CompanyData = () => {
-  return (
-    <View>
-      <Text style={{fontSize: 30}}>Company Name : BrainyDx Technologies</Text>
-      <Text style={{fontSize: 30}}>Since : 2010 </Text>
-      <Text style={{fontSize: 30}}>Empolyees : 500</Text>
+    <View style={Exstyles.viewBox}>
+      <Image
+        source={{
+          uri: 'https://media.licdn.com/dms/image/D4D35AQEmWdaj9WS09Q/profile-framedphoto-shrink_400_400/0/1693188551644?e=1694109600&v=beta&t=Ew8JCRGiweKEwmzdyDsdqTNBE5-qAYkd0Ro7K3Nyw7w',
+        }}
+        style={{
+          width: 200,
+          height: 200,
+          borderRadius: 40,
+          marginLeft: 100,
+          marginTop: 25,
+          marginBottom: 10,
+        }}
+      />
+      <Text style={{fontSize: 42, textAlign: 'center'}}>Hello👋</Text>
+
+      <UserData item={userDetails} />
+      {/* <Button title="Learn More" onPress={onPress} /> */}
+      <CompanyData item={companyDetails} />
+      <Button
+        title={`Count ${data}`}
+        color={'green'}
+        onPress={() => onPress()}
+      />
     </View>
   );
 };
