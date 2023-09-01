@@ -15,6 +15,8 @@ import Exstyles from './style';
 import Flat_List from './components/Flat_List';
 import CustomList from './components/CustomList';
 import Grid from './components/Layout-Grid';
+import SelList from './components/Sel-List';
+import ClassComp from './components/ClassComp';
 const App = () => {
   const [data, setData] = useState(0);
   const [name, setName] = useState('Akash');
@@ -37,15 +39,31 @@ const App = () => {
       <View style={Exstyles.viewBox}>
         {/* <Flat_List /> */}
         {/* <CustomList /> */}
+        <ClassComp/>
         <Grid />
+        <SelList />
 
-        <Image
-          source={{
-            uri: 'https://codeguyakash.github.io/server/image.png',
-          }}
-          style={Exstyles.profileImage}
-        />
-        <Text style={{fontSize: 42, textAlign: 'center'}}>Hello👋</Text>
+        <View style={Exstyles.grid}>
+          <Image
+            source={{
+              uri: 'https://codeguyakash.github.io/server/image.png',
+            }}
+            style={Exstyles.profileImage}
+          />
+          <Image
+            source={{
+              uri: 'https://codeguyakash.github.io/server/image.png',
+            }}
+            style={Exstyles.profileImage}
+          />
+          <Image
+            source={{
+              uri: 'https://codeguyakash.github.io/server/image.png',
+            }}
+            style={Exstyles.profileImage}
+          />
+        </View>
+        <Text style={{fontSize: 42}}>Hello👋</Text>
         <UserData item={userDetails} />
         <Button title="Learn More" onPress={onPress} />
         <CompanyData item={companyDetails} />
@@ -55,7 +73,7 @@ const App = () => {
           onPress={() => onPress()}
         />
         <Button title="press" onPress={() => Alert.alert('Hello')} />
-        <Text style={{fontSize: 42, textAlign: 'center'}}>{name}</Text>
+        <Text style={{fontSize: 42}}>{name}</Text>
         <TextInput
           placeholder="Enter Your Name"
           value={name}

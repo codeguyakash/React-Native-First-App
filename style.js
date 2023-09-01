@@ -3,17 +3,15 @@ import {StyleSheet} from 'react-native';
 export default Exstyles = StyleSheet.create({
   textBox: {
     color: '#F4EEEE',
-    backgroundColor: '#7091F5',
     fontSize: 35,
-    padding: 2,
-    textAlign: 'center',
+    padding: 10,
     borderRadius: 10,
     borderColor: 'white',
     borderWidth: 1,
   },
   text: {
     color: '#F4EEEE',
-    fontSize: 20,
+    fontSize: 30,
     padding: 10,
     margin: 10,
     borderRadius: 1,
@@ -44,7 +42,7 @@ export default Exstyles = StyleSheet.create({
   profileImage: {
     width: 100,
     height: 100,
-    borderRadius: 35,
+    borderRadius: 5,
     marginLeft: 'auto',
     marginRight: 'auto',
     marginTop: 25,
